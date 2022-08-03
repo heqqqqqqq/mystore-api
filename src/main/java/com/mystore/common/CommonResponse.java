@@ -1,5 +1,6 @@
 package com.mystore.common;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 
@@ -38,5 +39,11 @@ public class CommonResponse<T> {
     //请求错误，指定错误码和信息
     public static <T> CommonResponse <T> createForError(int code,String message){
         return new CommonResponse<>(code, message,null);
+    }
+
+    //判断成功还是失败
+    @JsonIgnore
+    public boolean isSuccess(){
+        return this.code==ResponseCode.SUCCESS.getCode();
     }
 }
