@@ -8,4 +8,6 @@ public class CONSTANT {
         int CUSTOMER=1;
         int ADMIN=0;
     }
+
+    public static final Integer CATEGORY_ROOT=0;//商品分类根节点
 }

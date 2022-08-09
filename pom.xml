@@ -76,7 +76,7 @@
             <artifactId>caffeine</artifactId>
         </dependency>
 
-        <!-- Apache Collections Utils -->
+        <!-- Apache Collections Utils，解决线程不安全问题 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-collections4</artifactId>
