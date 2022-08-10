@@ -31,8 +31,8 @@ public class User {
     //不用Date而用LocalDateTime
     //Java 8之后开始使用LocalDateTime,Date类线程访问不安全
     //MyBatisPlus会自动化将createTime和updateTime命名转化成create_time、update_time，但最好标注
-    @TableField("create_time")
+    @TableField(value="create_time")
     private LocalDateTime createTime;
-    @TableField("update_time")
+    @TableField(value="update_time")
     private LocalDateTime updateTime;
 }

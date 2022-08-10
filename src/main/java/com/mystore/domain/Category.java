@@ -19,16 +19,16 @@ public class Category {
 
     @TableId(type = IdType.AUTO)
     private Integer id;
-    @TableField("parent_id")
+    @TableField(value="parent_id")
     private Integer parentId;
     private String name;
     private Boolean status;
-    @TableField("sort_order")
+    @TableField(value="sort_order")
     private  Integer sortOrder;
 
-    @TableField("create_time")
+    @TableField(value="create_time")
     private LocalDateTime createTime;
-    @TableField("update_time")
+    @TableField(value="update_time")
     private LocalDateTime updateTime;
 
     // Set是通过hashCode和equals方法来判断集合中的元素是否重复，需要重写

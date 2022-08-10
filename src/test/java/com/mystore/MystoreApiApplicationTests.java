@@ -1,6 +1,10 @@
 package com.mystore;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mystore.domain.Category;
+import com.mystore.domain.Product;
+import com.mystore.persistence.ProductMapper;
 import com.mystore.persistence.UserMapper;
 import com.mystore.service.CategoryService;
 import com.mystore.service.impl.CategoryServiceImpl;
@@ -17,6 +21,9 @@ class MystoreApiApplicationTests {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private ProductMapper productMapper;
 
     @Autowired
     private CategoryServiceImpl categoryService;
@@ -49,5 +56,16 @@ class MystoreApiApplicationTests {
 //        Set<Category> categorySet=new HashSet<>();
 //        categoryService.findChildCategory(100001,categorySet);
 //        System.out.println("...");
+    }
+
+    @Test
+    public void testMybatisPlusPage(){
+        Page<Product> result=new Page<>(2,3);
+
+        QueryWrapper<Product> queryWrapper=new QueryWrapper<>();
+        queryWrapper.like("name","%A%");
+        result=productMapper.selectPage(result,queryWrapper);
+
+        System.out.println(",,,,,,");
     }
 }
