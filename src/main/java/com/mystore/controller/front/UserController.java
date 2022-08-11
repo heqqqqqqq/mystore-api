@@ -1,4 +1,4 @@
-package com.mystore.controller.front;
+package com.mystore.utils.front;
 
 import com.mystore.common.CONSTANT;
 import com.mystore.common.CommonResponse;

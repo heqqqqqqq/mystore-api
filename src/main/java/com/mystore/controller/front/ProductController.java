@@ -1,4 +1,4 @@
-package com.mystore.controller.front;
+package com.mystore.utils.front;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mystore.common.CommonResponse;
