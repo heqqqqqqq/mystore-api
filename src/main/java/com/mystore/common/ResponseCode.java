@@ -7,7 +7,8 @@ import lombok.Getter;
 public enum ResponseCode {
     SUCCESS(0,"SUCCESS"),
     ERROR(1,"ERROR"),
-    ARGUMENT_ILLEGAL(10,"ARGUMENT_ILLEGAL");//非法参数
+    ARGUMENT_ILLEGAL(10,"ARGUMENT_ILLEGAL"),//非法参数
+    NEED_LOGIN(11,"NEED_LOGIN");//用户未登录
 
     private final int code;
     private final String description;

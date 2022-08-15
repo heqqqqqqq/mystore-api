@@ -32,4 +32,9 @@ public class CONSTANT {
 
     public static final String PRODUCT_ORDER_BY_PRICE_ASC="price_asc";
     public static final String PRODUCT_ORDER_BY_PRICE_DESC="price_desc";
+
+    public interface CART{
+        int CHECKED=1;
+        int UNCHECKED=0;
+    }
 }

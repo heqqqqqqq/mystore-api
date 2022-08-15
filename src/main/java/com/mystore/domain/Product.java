@@ -31,4 +31,5 @@ public class Product {
     private LocalDateTime createTime;
     @TableField(value="update_time")
     private LocalDateTime updateTime;
+
 }
