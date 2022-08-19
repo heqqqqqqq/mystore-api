@@ -30,6 +30,44 @@ public class CONSTANT {
 
     }
 
+    //支付类型
+    @Getter
+    public enum PayType{
+
+        ALIPAY(1,"支付宝"),
+        WECHAT(2,"微信支付"),
+        OTHER(3,"其他类型");
+
+        private final int code;
+        private final String description;
+
+        PayType(int code,String description){
+            this.code=code;
+            this.description=description;
+        }
+
+    }
+
+    //订单状态
+    @Getter
+    public enum OrderStatus{
+
+        CANCEL(1,"已取消"),
+        UNPAID(2,"未付款"),
+        PAID(3,"已付款"),
+        SHIPPED(4,"已发货"),
+        SUCCESS(5,"交易成功"),
+        CLOSED(6,"交易关闭");
+
+        private final int code;
+        private final String description;
+
+        OrderStatus(int code,String description){
+            this.code=code;
+            this.description=description;
+        }
+    }
+
     public static final String PRODUCT_ORDER_BY_PRICE_ASC="price_asc";
     public static final String PRODUCT_ORDER_BY_PRICE_DESC="price_desc";
 
