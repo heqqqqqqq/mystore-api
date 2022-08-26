@@ -75,4 +75,18 @@ public class CONSTANT {
         int CHECKED=1;
         int UNCHECKED=0;
     }
+
+    //支付状态
+    public interface AlipayTradeStatus{
+        String WAIT_BUYER_PAY="WAIT_BUYER_PAY";
+        String TRADE_CLOSED="TRADE_CLOSED";
+        String TRADE_SUCCESS="TRADE_SUCCESS";
+        String TRADE_FINISHED="TRADE_FINISHED";
+    }
+    //返回给支付宝
+    public interface AlipayCallbackResponse{
+        String RESPONSE_SUCCESS="success";
+        String RESPONSE_FAILED="failed";
+    }
+
 }
